@@ -53,3 +53,14 @@ body {
   margin-left: -210px;
   z-index: 10;
 }
+
+#skull {
+  background-image: url("../images/skull.png");
+  width: 260px;
+  height: 306px;
+  position: absolute;
+  left: 50%;
+  bottom: 280px;
+  margin-left: -130px;
+
+}
