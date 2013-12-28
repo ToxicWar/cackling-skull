@@ -32,3 +32,24 @@ body {
   position: absolute;
   background-color: #d67f7f;
 }
+
+#rod {
+  background-color: #8e7e9d;
+  width: 16px;
+  height: 180px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -8px;
+}
+
+#dish {
+  background-image: url("../images/dish.png");
+  width: 420px;
+  height: 200px;
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  margin-left: -210px;
+  z-index: 10;
+}
