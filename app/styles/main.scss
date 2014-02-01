@@ -54,12 +54,25 @@ body {
   z-index: 10;
 }
 
-#skull {
-  background-image: url("../images/skull.png");
+#skull-full {
   width: 256px;
-  height: 276px;
+  height: 270px;
   position: absolute;
   left: 50%;
   bottom: 210px;
   margin-left: -128px;
+}
+
+#skull {
+  background-image: url("../images/skull.png");
+  width: 256px;
+  height: 212px;
+  z-index: 100;
+}
+
+#jaw {
+  background-image: url("../images/jaw.png");
+  width: 256px;
+  height: 58px;
+  z-index: 10;
 }
