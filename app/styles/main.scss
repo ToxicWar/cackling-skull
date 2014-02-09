@@ -50,7 +50,7 @@ body {
 
 #dish {
   @include absolute-center(-210px);
-  background-image: url("../images/dish.png");
+  background-image: url("../img/dish.png");
   width: 420px;
   height: 160px;
   bottom: 42px;
@@ -65,14 +65,14 @@ body {
 }
 
 #skull {
-  background-image: url("../images/skull.png");
+  background-image: url("../img/skull.png");
   width: 256px;
   height: 212px;
   z-index: 100;
 }
 
 #jaw {
-  background-image: url("../images/jaw.png");
+  background-image: url("../img/jaw.png");
   width: 256px;
   height: 58px;
   z-index: 10;
