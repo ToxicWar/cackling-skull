@@ -11,7 +11,7 @@ var paths = {
   styles: ['app/styles/*.scss'],
   scripts: ['app/scripts/*.coffee'],
   images: 'app/images/*',
-  index: 'app/index.html'
+  index: ['app/index.html', 'app/favicon.ico']
 };
 
 gulp.task('styles', function () {
