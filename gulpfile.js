@@ -1,3 +1,5 @@
+// Gulp is awesome!
+
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var sass = require('gulp-sass')
@@ -10,6 +12,7 @@ var connect = require('gulp-connect');
 var paths = {
   styles: ['app/styles/*.scss'],
   scripts: ['app/scripts/*.coffee'],
+  libs: ['app/bower_components/jquery/jquery.min.js'],
   images: 'app/images/*',
   index: ['app/index.html', 'app/favicon.ico']
 };
@@ -28,6 +31,13 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(concat('all.min.js'))
     .pipe(gulp.dest('build/js'))
+    .pipe(connect.reload());
+});
+
+// Copy javascript libs
+gulp.task('libs', function() {
+  return gulp.src(paths.libs)
+    .pipe(gulp.dest('build/js/libs'))
     .pipe(connect.reload());
 });
 
@@ -66,4 +76,4 @@ gulp.task('watch', function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['styles', 'scripts', 'images', 'index', 'connect', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'libs', 'images', 'index', 'connect', 'watch']);
