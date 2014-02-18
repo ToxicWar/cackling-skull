@@ -1,7 +1,10 @@
 jQuery ($) ->
-	removeAnimationClass = (elem) ->
-		$(elem).attr 'class', ''
+	delay = (ms, func) -> setTimeout func, ms
 
 	$('#skull-full').on 'click', ->
-		$(this).attr 'class', 'pressure'
-		# setTimeout(removeAnimationClass(this), 1000)
+		that = this
+		this.style.animation = 'press 500ms 2 alternate'
+		this.style.webkitAnimation = 'press 500ms 2 alternate'
+		delay 1000, ->
+			that.style.animation = ''
+			that.style.webkitAnimation = ''
