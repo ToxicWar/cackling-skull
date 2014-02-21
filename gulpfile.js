@@ -14,7 +14,7 @@ var paths = {
   scripts: ['app/scripts/*.coffee'],
   libs: ['app/bower_components/jquery/jquery.min.js'],
   images: 'app/images/*',
-  index: ['app/index.html', 'app/favicon.ico']
+  index: ['app/index.html', 'app/favicon.ico', 'app/jokes.json']
 };
 
 gulp.task('styles', function () {
@@ -28,7 +28,7 @@ gulp.task('scripts', function() {
   // Minify and copy all JavaScript (except vendor scripts)
   return gulp.src(paths.scripts)
 	.pipe(coffee())
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(concat('all.min.js'))
     .pipe(gulp.dest('build/js'))
     .pipe(connect.reload());

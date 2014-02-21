@@ -1,4 +1,6 @@
 jQuery ($) ->
+	jokes = null
+
 	delay = (ms, func) -> setTimeout func, ms
 
 	$('#skull-full').on 'click', ->
@@ -8,3 +10,12 @@ jQuery ($) ->
 		delay 1000, ->
 			that.style.animation = ''
 			that.style.webkitAnimation = ''
+			randomJoke()
+
+	loadJokes = ->
+		$.getJSON "/jokes.json", (data) ->
+			jokes = data.jokes
+	loadJokes()
+
+	randomJoke = ->
+		alert jokes[Math.floor Math.random() * jokes.length]
