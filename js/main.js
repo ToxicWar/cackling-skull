@@ -1,1 +1,0 @@
-(function(){jQuery(function(t){var n;return n=function(n){return t(n).attr("class","")},t("#skull-full").on("click",function(){return t(this).attr("class","pressure")})})}).call(this);

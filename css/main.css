@@ -10,7 +10,9 @@ body {
   padding-bottom: 100px;
   background-color: #8b6b72;
   background-image: linear-gradient(90deg, #9d7d8b 50%, transparent 50%), linear-gradient(90deg, #a58799 50%, transparent 50%), linear-gradient(90deg, #8b6b72 50%, transparent 50%);
-  background-size: 84px, 160px, 128px; }
+  background-size: 84px, 160px, 128px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333; }
 
 #shelf-top {
   width: 100%;
@@ -65,6 +67,20 @@ body {
   width: 256px;
   height: 58px;
   z-index: 10; }
+
+#message-box {
+  position: absolute;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+  top: 100px; }
+
+#message-box p {
+  font-size: 20px;
+  color: #ecf0f1;
+  font-weight: bold;
+  line-height: 30px;
+  margin: 0 0 10px; }
 
 /*
  *  Animation
