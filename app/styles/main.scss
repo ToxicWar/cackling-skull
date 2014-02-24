@@ -22,6 +22,8 @@ body {
     linear-gradient(90deg, rgba(165, 135, 153, 1) 50%, transparent 50%),
     linear-gradient(90deg, rgba(139, 107, 114, 1) 50%, transparent 50%);
   background-size: 84px, 160px, 128px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
 }
 
 #shelf-top {
@@ -79,6 +81,19 @@ body {
   z-index: 10;
 }
 
+#message-box {
+  @include absolute-center(-200px);
+  width: 400px;
+  top: 100px;
+}
+
+#message-box p {
+  font-size: 20px;
+  color: #ecf0f1;
+  font-weight: bold;
+  line-height: 30px;
+  margin: 0 0 10px;
+}
 
 /*
  *  Animation

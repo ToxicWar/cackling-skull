@@ -18,4 +18,4 @@ jQuery ($) ->
 	loadJokes()
 
 	randomJoke = ->
-		alert jokes[Math.floor Math.random() * jokes.length]
+		$('#message-box').html('<p>' + jokes[Math.floor Math.random() * jokes.length] + '</p>');
